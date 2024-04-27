@@ -1,7 +1,15 @@
 #clue 1 - The very odd and inedible ingredient in a cake recipe
-password="Paper Rings"
+cd clues/food/cake
+#Read vanilla_cake.txt and find inedible ingredient
+cat chocolate_cake.txt
+cat red_velvet_cake.txt
+cat vanilla_cake.txt
 
-# clue 2
+password="Paper Rings "
+
+cd ../../../
+
+
 showsdir="clues/shows/friends"
 show_count=18
 # Loop through each subdirectory
@@ -15,7 +23,7 @@ for show in "$showsdir"/*; do
             filename=$(basename "$show" | cut -d'.' -f1)
             # Split the filename by underscores and get the season number
             season_num=$(echo "$filename" | awk -F '_' '{print $2}')
-            password+="$season_num"
+            password+="$season_num "
             echo "$password"
             break
         fi
@@ -26,7 +34,7 @@ directory="clues/shows/friends/season_6"
 filename="ep_21.txt"
 # Read the fifth word from the file
 fifth_word=$(awk '{print $5}' "$directory/$filename")
-password+="$fifth_word"
+password+="$fifth_word "
 echo "$password"
 
 # clue 4
@@ -34,7 +42,7 @@ echo "$password"
 directory="clues/movies/space_wars"
 filename="fifth_movie.txt"
 fifth_word=$(awk '{print $5}' "$directory/$filename")
-password+="$fifth_word"
+password+="$fifth_word "
 echo "$password"
 
 
@@ -59,7 +67,7 @@ for file in "$directory"/*; do
             IFS=' ' read -r -a second_parts <<< "$second_part"
             # Get the second word
             second_word="${second_parts[1]}"
-            password+="${second_word}"
+            password+="${second_word} "
         fi
     fi
 done
@@ -69,7 +77,7 @@ done
 directory="clues/movies/hanger_games"
 filename="movie_4.txt"
 fourth_word=$(awk '{print $4}' "$directory/$filename")
-password+="$fourth_word"
+password+="$fourth_word "
 echo "$password"
 
 
