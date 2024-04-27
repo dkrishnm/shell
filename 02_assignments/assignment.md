@@ -34,9 +34,9 @@ You are stuck in a virtual room and can only leave if you figure out the passwor
 
 **What is the secret password?**
 ```
-Your answer here...
+Paper Rings10MeetsandLuckyStars
 
-
+Please find the screen shots for the scripts run to find the answer at Assignment 1 - Solution screenshots.pdf
 
 
 ```
